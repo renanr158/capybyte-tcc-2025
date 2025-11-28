@@ -1,0 +1,45 @@
+body.high-contrast {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+body.high-contrast a,
+body.high-contrast .nav-links a,
+body.high-contrast .brand-name,
+body.high-contrast .brand-name2,
+body.high-contrast .curso-container,
+body.high-contrast .containerback,
+body.high-contrast footer,
+body.high-contrast .dropdown-content {
+  color: #fff !important;
+  background-color: #000 !important;
+  box-shadow: none !important;
+}
+
+body.high-contrast .dropdown-content {
+  background-color: #000 !important;
+  border: 2px solid #fff !important;
+}
+
+body.high-contrast a:hover,
+body.high-contrast a:focus {
+  color: #ffd600 !important; /* high-visibility hover color */
+  text-decoration: underline;
+}
+
+body.high-contrast .acessibilidade {
+  background: #fff !important;
+  border-color: #fff !important;
+}
+
+body.high-contrast img {
+  filter: none !important;
+}
+
+/* keyboard focus visible in high contrast */
+body.high-contrast a:focus,
+body.high-contrast button:focus,
+body.high-contrast [role="button"]:focus {
+  outline: 3px solid #ffd600;
+  outline-offset: 2px;
+}

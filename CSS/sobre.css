@@ -1,0 +1,262 @@
+:root {
+    --azul: #006bb6;
+    --preto: #000;
+    --branco: #fff;
+    --fundo: #29324B;
+    --fundo_botão: #002174ac;
+    --botão: #336BFF;
+
+}
+
+body{
+    background-color: var(--fundo);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    user-select: none;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--fundo);
+    padding: 20px 0;
+    box-shadow: #000 1px 2px 12px;
+  }
+  
+  .nav-container {
+    max-width: 100vw;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: ;
+  }
+  
+  /* Grupo da Logo + Nome */
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .brand img {
+    height: 80px;
+    width: auto;
+  }
+  
+  .brand-name {
+    font-size: 2.18vw;
+    font-weight: bold;
+    font-family: "Pixelify Sans", sans-serif;
+    color: var(--branco);
+    text-shadow: #000 0.3vw 0.3vw 0.8vw;
+  }
+  
+  /* Links de navegação */
+  .nav-links {
+    display: flex;
+    gap: 40px;
+  }
+  
+  .nav-links a {
+    text-shadow: #000 0.3vw 0.3vw 0.8vw;
+    color: var(--branco);
+    font-size: 22px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: var(--azul);
+    transform: scale(1.1);
+  }
+  
+  /* Responsivo para celular */
+  @media (max-width: 768px) {
+    .nav-container {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .brand img {
+      height: 60px;
+    }
+  
+    .brand-name {
+      font-size: 22px;
+    }
+  
+    .nav-links {
+      gap: 20px;
+    }
+  }
+
+ /* Acessibilidade - Dropdown */
+
+.acessibilidade{
+  position: fixed;
+  width: 8vh;
+  height: 8vh;
+  background-color: white ;
+  top: 80%;
+  border: 3px solid white;
+  border-radius: 100%;
+  right: 4%;
+  z-index: 10;box-shadow: rgba(0, 0, 0, 0.468) 2px 2px 2px 2px;
+   transition: transform .2s;
+}
+
+.acessibilidade:hover
+{
+  right: 4%;
+transform: scale(1.5);
+  background-color: #fadd38 ;
+  
+  border: 3px solid #fadd38;
+  border-radius: 100%;
+  
+  z-index: 10;
+}
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+ 
+
+  .dropdown-content {
+    font-weight: 900;
+    display: none; /* Esconde o menu */
+    text-align: center;
+    top: 55%;
+    position: fixed;
+    background-color: var(--botão);
+    width: 20vw;
+    border-radius: 1.5vw;
+    box-shadow: 0px 30px 20px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    right: 2%;
+    font-size: 100%;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 2vh 2.7vh;
+    text-decoration: none;
+    display: block;
+    color: white;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #ffffff;
+    border-radius: 1.5vw;
+    animation: scaleUp 0.3s ease-in-out;
+    color: #183153;
+  }
+
+    .dropdown-content a:active {
+    background-color: #e92c2c;
+    border-radius: 1.5vw;
+    animation: scaleUp 0.3s ease-in-out;
+    color: #183153;
+  }
+
+  /* Classe para mostrar o dropdown */
+  .show {
+    display: block;
+  }
+
+
+footer{
+  margin-top: 20vw  ;
+  background-color: var(--fundo);
+  height: 20vw;
+  border-radius: 50px 50px 0 0;
+  box-shadow: #000 1px -2px 12px;
+}
+.meioPorra{
+  height: auto;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+#foto-footer{
+  margin-top: 2vw;
+  height: auto;
+  width: 10vw;
+  
+}
+
+.name-footer{
+  height: auto;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.brand-name2{
+  font-size: 40px;
+    font-weight: bold;
+    font-family: "Pixelify Sans", sans-serif;
+    color: var(--branco); 
+
+}
+
+/*-----------------------------  infos ----------------------------- */
+.container_equipe{
+  width: 90vw;
+  height: 80vw;
+  margin: 0 auto;
+  color: white ;  
+ margin-top: 10vw;
+font-family: "Quicksand", sans-serif;
+}
+.containerback{
+  background-color: #384774;
+  height: 80vw;
+  font-weight: 700;
+  font-size: 1vw;
+  border-radius: 20px;
+  filter: drop-shadow(1px  1px 10px #ffffffa5);
+  display: flex;
+}
+
+#titulo-sobre{
+  text-align: center;
+  font-size: 60px;
+  margin-top: 2vw;
+}
+
+.textos{
+  margin-left: 3vw;
+  margin-right: 3vw;
+  margin-top: 2vw;
+  font-size: 1.5vw;
+  text-align: justify;
+}
+
+#container_video{
+ margin-top: 2vw;
+  position: absolute;
+  margin-left: 22%;
+  
+}
+
+iframe{
+  width: 44.75vw;
+  height: 26.609375vw;
+  margin-top: 1vw;
+  border-radius: 5%;
+}
+
+
+#titulo-makeof{
+  font-size: 2vw;
+}

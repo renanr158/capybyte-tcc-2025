@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Meu App Firebase</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4; display: flex; justify-content: center; align-items: center; min-height: 90vh;}
+        .container { max-width: 400px; padding: 30px; background-color: #fff; border-radius: 8px; box-shadow: 0 2px 4px rgba
+            (0,0,0,0.1); text-align: center;}
+        input[type="email"], input[type="password"] { width: calc(100% - 22px); padding: 10px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 4px; }
+        button { padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 16px;}
+        button:hover { background-color: #0056b3; }
+        .message { color: red; margin-top: 15px; }
+        a { color: #4CAF50; text-decoration: none; margin-top: 20px; display: block; }
+        a:hover { text-decoration: underline; }
+    </style>
+    <link rel="shortcut icon" href="/img/Logo1.svg" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <p id="message" class="message"></p>
+
+        <form id="loginForm">
+            <input type="email" id="loginEmail" placeholder="Email" required>
+            <input type="password" id="loginPassword" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
+        </form>
+
+        <a href="cadastro.html">Não tem uma conta? Registre-se</a>
+    </div>
+
+    <!-- Inclua o SDK do Firebase E SEU SCRIPT DE AUTENTICAÇÃO -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="firebase.js"></script>
+
+    <script>
+        // Lógica específica desta página para interagir com auth.js
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+            await window.loginUser(email, password);
+        });
+    </script>
+</body>
+</html>
+
