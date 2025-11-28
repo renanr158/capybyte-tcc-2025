@@ -76,7 +76,7 @@ auth.onAuthStateChanged((user) => {
     if (user) {
         // Usuário está logado
         // Se o usuário está em uma página pública (login, cadastro) e logou, redireciona para a segura.
-        if (currentPath.includes('login.html') || currentPath.includes('cadastro.html') || currentPath === '/') {
+        if (currentPath.includes('login.html') || currentPath.includes('cadastro.html') || currentPath === '/' || currentPath.endsWith('index.html')) {
             window.location.href = 'cursos.html';
         }
         // Se o usuário já está na página segura, atualiza o e-mail exibido
